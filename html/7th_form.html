@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+   <!-- today we will discuss form   -->
+    <!-- form is used to collect user input  -->
+     <form  method="Post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Office use only</legend>
+            <label for="name">name</label>
+            <input type="text" id="name" name="fname" placeholder="enter your name" value="ahmad"><br>
+            <label for="phone">phone</label>
+            <input type="tel" name="phone" id="phone"><br>
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" required><br>
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" minlength="8" pattern="[A-Za-z0-9]+" required>
+            <span onmouseover="showpassword()">show/hide</span>
+<a href="mailto:hial@gmail.com">email me</a>
+
+            <span onmouseover="getvalue()">show name</span>
+        </fieldset>
+
+<button type="submit">submit</button>
+     </form>
+</body>
+<script>
+  //  i want to get the value of the input field
+  function getvalue(){
+      var x = document.getElementById("name").value;
+      console.log(x);
+  }
+  //i want to make a button to show and hide the password
+    function showpassword(){
+        var x = document.getElementById("password");
+        if(x.type === "password"){
+            x.type = "text";
+        }else{
+            x.type = "password";
+        }
+    }
+</script>
+</html>

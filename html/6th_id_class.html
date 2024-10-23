@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id and class</title>
+    <style>
+        .customencolor{
+            color: red;
+        }
+        #myheading{
+            color: blue;
+        }
+        #myname{
+            font-size: 80px;
+        }
+        #myframe{
+          margin: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- class: we difine it with a dot . -->
+     <!-- class="customcolor" -->
+      <!-- id: we define it with a hash #. -->
+       <!-- id="myheading" -->
+<div>
+    <h1 id="myheading">This is my heading</h1>
+    
+</div>
+    <div class="customencolor myheading">
+<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ipsum debitis eos molestias cumque. Magnam perspiciatis in eos natus blanditiis.</span>
+    </div>
+    <div  id="myname">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ipsum debitis eos molestias cumque. Magnam perspiciatis in eos natus blanditiis.</p>
+            </div>
+<!-- we will use iframe  -->
+<div id="myframe">
+    <iframe src="https://mycolor.space/" frameborder="0" width="800px" height="800px" title="Color Space" loading="lazy" allowfullscreen></iframe>
+</div>
+<!-- we will use iframe  -->
+            <input type="text" name="phone" id="phone" oninput="telephone()">
+            <span id="showphone">connn</span>
+            <span id="showphone">connn</span>
+            <script>
+                function telephone(){
+                    var phone = document.getElementById('phone').value;
+                    document.getElementById('showphone').innerText = phone;
+                }
+            </script>
+</body>
+</html>
