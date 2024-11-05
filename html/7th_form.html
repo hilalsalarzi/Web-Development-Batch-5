@@ -8,21 +8,95 @@
 <body>
    <!-- today we will discuss form   -->
     <!-- form is used to collect user input  -->
-     <form  method="Post" enctype="multipart/form-data">
+     <form  method="Post" action="hilal.php" enctype="multipart/form-data">
         <fieldset>
             <legend>Office use only</legend>
             <label for="name">name</label>
-            <input type="text" id="name" name="fname" placeholder="enter your name" value="ahmad"><br>
+            <input type="text" id="name" name="fname" placeholder="enter your name" value="Ahmad"><br>
             <label for="phone">phone</label>
             <input type="tel" name="phone" id="phone"><br>
             <label for="email">email</label>
             <input type="email" name="email" id="email" required><br>
             <label for="password">password</label>
-            <input type="password" name="password" id="password" minlength="8" pattern="[A-Za-z0-9]+" required>
+            <input type="password" name="hello" id="password" minlength="8"  required>
             <span onmouseover="showpassword()">show/hide</span>
 <a href="mailto:hial@gmail.com">email me</a>
 
-            <span onmouseover="getvalue()">show name</span>
+            <span onmouseover="getvalue()">show name</span><br><br>
+            <label for="button">Button:</label><br>
+
+
+<label for="checkbox">Cricket:</label>
+<input type="checkbox" id="checkbox" name="hobby" value="Cricket"><br>
+<label for="checkbox">Racing:</label>
+<input type="checkbox" id="checkbox" name="hobby" value="Racing"><br>
+<label for="checkbox">football:</label>
+<input type="checkbox" id="checkbox" name="hobby" value="football"><br>
+<input type="button" id="button" onclick="getcheckbox()"  value="show"><br>
+<label for="color">Color:</label>
+<input type="color" id="color"><br>
+
+<label for="date">Date:</label>
+<input type="date" id="date"><br>
+
+<label for="datetime-local">Datetime Local:</label>
+<input type="datetime-local" id="datetime-local"><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email"><br>
+
+<label for="file">File:</label>
+<input type="file" id="file"><br>
+
+<label for="hidden">Hidden:</label>
+<input type="hidden" id="hidden" value="<?php echo $id?>"><br>
+
+<label for="image">Image:</label>
+<input type="image" id="image"><br>
+
+<label for="month">Month:</label>
+<input type="month" id="month"><br>
+
+<label for="number">Number:</label>
+<input type="number" id="number"><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password"><br>
+
+<label for="male">male:</label>
+<input type="radio" id="male" name="gender" value="male"><br>
+<label for="female">female:</label>
+<input type="radio" id="female" name="gender" value="female"><br>
+<label for="other">other:</label>
+<input type="radio" id="other" name="gender" value="other"><br>
+
+
+<label for="range">Range:</label>
+<input type="range" id="range" min="0" max="100" step="20" value="90"><br>
+
+<label for="reset">Reset:</label>
+<input type="reset" id="reset"><br>
+
+<label for="search">Search:</label>
+<input type="search" id="search"><br>
+
+<label for="submit">Submit:</label>
+<input type="submit" id="submit"><br>
+
+<label for="tel">Tel:</label>
+<input type="tel" id="tel"><br>
+
+<label for="text">Text:</label>
+<input type="text" id="text"><br>
+
+<label for="time">Time:</label>
+<input type="time" id="time"><br>
+
+<label for="url">URL:</label>
+<input type="url" id="url"><br>
+
+<label for="week">Week:</label>
+<input type="week" id="week"><br>
         </fieldset>
 
 <button type="submit">submit</button>
@@ -43,5 +117,11 @@
             x.type = "password";
         }
     }
+//i want to show the value of the checkbox
+function getcheckbox(){
+    var checkboxes = document.querySelectorAll('input[name="hobby"]:checked');
+    var values = Array.from(checkboxes).map(cb => cb.value);
+    console.log(values);
+}
 </script>
 </html>
