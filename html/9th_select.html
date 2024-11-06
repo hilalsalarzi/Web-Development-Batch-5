@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: green;
+            overflow: hidden;
+            background-color: #333;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: rgb(227, 19, 19);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #ffffff;
+        }
+        figure {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 40px;
+            margin-inline-end: 40px;
+        }
+        figcaption {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 40px;
+            margin-inline-end: 40px;
+        }
+    </style>
+</head>
+
+<br>
+<nav>
+    <ul>
+        <li><a href="#home" id="top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+    <label for="carmodel"> Select Car</label>
+    <select name="carmodel" id="carmodel"> 
+        <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+        </optgroup>
+        <option value="" >select</option>
+        <option value="volvo" >Volvo</option>
+        <option value="saab" selected>Saab</option>
+        <option value="fiat" disabled>Fiat</option>
+        <option value="audi">Audi</option>
+    </select> <br>
+    <span id="selectedcar"></span><br><br>
+<label for="ss"> select browsers</label>
+<input list="browsers" id="ss" name="browsers">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <br> <br>
+  <figure>
+    <img src="../images/car.jpg" alt="Trulli" style="width:50%">
+    <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+  </figure> <br><br>
+<video width="320" height="240" controls  muted>
+    <source src="../video/ReactJs-part-01-minutes.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+<br><br>
+    <audio controls>
+        <source src="../audio/1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br><br>
+    <p id="home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor temporibus vel laudantium totam cumque voluptates. Animi illo earum laborum cupiditate velit, ab sunt possimus itaque. Quos illo cumque unde! Laborum?</p>
+    <a href="#top">go to top</a>
+    <!-- show the selected car model: -->
+    <script>
+        var carmodel = document.getElementById("carmodel");
+        var selectedcar = document.getElementById("selectedcar");
+        carmodel.addEventListener("change", function(){
+            selectedcar.innerHTML = carmodel.value;
+        });
+    </script>
+</body>
+</html>
