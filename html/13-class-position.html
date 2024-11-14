@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position, overflow, z-index</title>
+    <style>
+#box1{
+    border: 2px solid red;
+    background-color: rgb(110, 71, 201);
+    position: sticky;
+    z-index: 2;
+top: 10px;  
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.container{
+   
+    background-color: yellow;
+        position: relative; /* Makes #container the reference for absolute positioning */
+        width: 1200px;      /* Adjust as needed */
+        height: 1000px;     /* Adjust as needed */
+    
+}
+#box2 {
+    position: relative;
+    border: 2px solid red;
+    background-color: green;
+    width: 1000px;
+    height: 1000px;
+    z-index: 1;
+}
+#parrot {
+    position: absolute; /* Positions #parrot relative to #container */
+    background-color: aliceblue;
+    width: 150px;
+    height: 150px;
+    right: 0;
+    bottom: 90px; /* Aligns the picture to the right side */
+}
+#box4 {
+background-color: red;
+width: 200px;
+height: 200px;
+overflow: auto;
+}
+#box5 {
+background-color: blue;
+border: 2px solid black;
+float:left;
+text-align: center;
+
+
+}
+#box5 >p {
+   
+}
+#flpr {
+   float: center; 
+
+}
+    </style>
+</head>
+<body>
+    <h1>Position, overflow, z-index</h1>
+    <div>
+        <h2>Box 5</h2>
+        <p>Box 5 content</p>
+        <div id="box5">
+            <img id="flpr" src="../images/parrot.png" alt="" >
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo nisi, sapiente sequi autem saepe dolores, corrupti voluptate placeat, quas velit doloremque magni? Quas neque debitis, numquam vitae id rerum.</p>
+           
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt cumque voluptatem est dolorum asperiores sunt saepe iusto sapiente praesentium quo fugit facere cupiditate esse harum quisquam, eius adipisci vero autem.</p>
+            
+        </div>
+      
+    <div>
+        <h2>Box 4</h2>
+        <p>Box 4 content</p>
+        <div id="box4">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo nisi, sapiente sequi autem saepe dolores, corrupti voluptate placeat, quas velit doloremque magni? Quas neque debitis, numquam vitae id rerum.</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt cumque voluptatem est dolorum asperiores sunt saepe iusto sapiente praesentium quo fugit facere cupiditate esse harum quisquam, eius adipisci vero autem.</p>
+        </div>
+    </div>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, quo suscipit accusamus, possimus iure dolor maxime quidem fuga sed harum reiciendis doloribus mollitia adipisci error ab recusandae cum porro omnis tempora delectus. Architecto doloribus est sunt voluptatem beatae vel eius omnis quae magni nulla obcaecati nam laboriosam ut, vitae illum. Iusto rerum fuga officia facere nemo, corrupti explicabo maiores eum repellat modi nihil, veniam illo ad doloribus dolore similique distinctio suscipit? Earum nobis similique aliquid, dolores rerum sunt fugiat quaerat ipsam laborum, impedit aliquam sed commodi blanditiis sequi beatae corporis, iusto iste. Mollitia eum qui dignissimos ratione est voluptatem quaerat quae unde iure obcaecati amet odio, doloribus ex quibusdam placeat ipsa optio neque! Dolore autem ducimus perspiciatis explicabo. Doloribus hic ut explicabo aliquid laborum rem asperiores, provident unde iusto aliquam? Et eligendi necessitatibus quae ratione officiis quam, ea assumenda rem. Sunt quis sint provident dolores reiciendis doloribus excepturi totam, tempore iusto unde vero expedita voluptatem maxime dolor molestiae harum autem tempora eius alias quas fugiat vel officiis voluptas. Reiciendis quibusdam recusandae eius magni illum ducimus quo eligendi, omnis iure, tempora odit quae maxime repudiandae. Suscipit pariatur praesentium atque expedita sit aperiam repellendus libero saepe nisi asperiores doloremque tempore, consequuntur accusantium reiciendis autem porro voluptate id, iure eveniet sint architecto est perspiciatis ad molestias. Tempora quibusdam quisquam velit id sint dolor possimus quia, eveniet, saepe quae optio doloremque numquam vel ex rem totam dignissimos quis voluptate architecto soluta? Nam quibusdam perspiciatis exercitationem a modi eius labore laboriosam, vel corrupti quasi magnam dolorem quos tempora doloribus voluptatibus itaque dolor porro. Debitis sunt blanditiis ullam aliquam atque officiis sed, perferendis quaerat ut labore, eligendi, sequi at deleniti molestias! Dolor temporibus perferendis voluptatibus quisquam fuga nulla eos blanditiis, ipsum ad ipsam consequuntur totam debitis quibusdam nisi ullam placeat quasi quia explicabo porro. Maiores, necessitatibus?</p>
+    <div id="box1">
+      <a href="www.onicbyte.com"> <img src="../images/parrot.png" style="width: 50px;" alt=""></a>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fugiat et accusantium blanditiis autem deserunt, assumenda soluta veritatis porro, magni doloribus repellendus incidunt, maiores illo nostrum ex nam aperiam non atque cumque laudantium laboriosam! Vero, at doloribus recusandae dolorem expedita non, modi voluptatibus repellat delectus corporis dolor cumque, excepturi nesciunt? Corrupti itaque quisquam necessitatibus minus, tempore nesciunt sint! Doloremque cum ex deserunt nam accusamus numquam culpa ab excepturi, accusantium quae optio aut aspernatur debitis consequuntur recusandae libero laudantium reprehenderit ipsa nemo? Quia cupiditate animi provident facilis odio unde fugiat nulla maxime esse quam, aliquam officiis. Eius expedita exercitationem quos maiores doloribus placeat aperiam vitae debitis veniam natus nam, dignissimos repellat reiciendis inventore delectus dolore velit dolorum possimus tempore dicta iure animi cumque iusto! Maiores omnis explicabo, nulla dicta a quod enim ad rerum dolorum expedita fugiat facere quibusdam beatae commodi! Modi, quis. Blanditiis, doloribus cum, recusandae praesentium, amet voluptas natus temporibus perspiciatis rem quae a nesciunt fuga eligendi aperiam aliquam cumque repudiandae optio atque. Odit deserunt possimus distinctio cum dolore laudantium sit voluptatem est expedita voluptatibus sequi error modi laborum ducimus voluptate similique voluptas, eos nulla? Veniam nulla quod doloremque distinctio? Eligendi optio laboriosam, aliquam eum ea cumque beatae quae in corrupti quam ipsa ut sint facere provident molestiae nihil fuga voluptas, vel neque vitae quibusdam esse quasi laudantium labore? Esse ipsum in repudiandae labore at eius quidem quos libero explicabo vel ducimus recusandae unde rerum quas aperiam ipsam, aspernatur architecto earum harum assumenda nesciunt, corrupti maxime? Architecto voluptas, doloribus voluptatum non iste iure, perferendis maxime nemo aperiam quia quibusdam inventore, laboriosam alias totam cupiditate debitis impedit ex expedita ipsam dolor dolores voluptate fugit. Repellendus reiciendis voluptas, distinctio corrupti non facere cum architecto ut consectetur, ullam sunt culpa voluptates aliquid expedita, ab similique voluptatibus iste quia illo. Quis, veniam illum.</p>
+    <div  class="container">
+        
+        <div id="box2">
+            <h1>Box 2</h1>
+            <p>Box 2 content</p>
+            <img src="../images/parrot.png" id="parrot" alt="">
+        </div>
+        <div id="box3">
+            <h1>Box 3</h1>
+            <p>Box 3 content</p>
+        </div>
+    </div>
+</body>
+</html>
