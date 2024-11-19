@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity, nav bar, dropdown list, image gallery</title>
+    <style>
+        img{
+            opacity: 0.2;
+            border: 2px solid green;
+        }
+        img:hover{
+            opacity: 1;
+        }
+        .nav{
+            background-color: #989090;
+         
+          width: 100%;
+         text-align: center;
+         position: relative;
+        }
+        
+        
+        .ulcl>li{
+           
+            list-style-type: none;
+           
+            padding: 0;
+        
+            display: inline-block;
+            padding: 10px;
+         
+            
+           
+        }
+        .ulcl>li:hover{
+          
+            color: green;
+           
+           
+        }
+        .dropdown{
+            
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        
+            list-style: none;
+            z-index: 4;
+            display: none;
+          
+        }
+        .show:hover .dropdown{
+            display: block;
+            padding: 20px;
+        }
+        .show:hover .dropdown>li{
+            
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <!-- navigation bar -->
+     <nav class="nav">
+        <ul class="ulcl">
+            <li>Home</li>
+            <li class="show">About
+                <ul class="dropdown">
+                    <li>History</li>
+                    <li>Team</li>
+                    <li>Offices</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+     </nav>
+    </div>
+    <br>
+ <div>
+    <img  src="../images/car.jpg" style="height: 300px; width:300px;" alt="racing car">
+    <img src="../images/car.jpg" style="height: 300px; width:300px;" alt="">
+    <img src="../images/car.jpg" style="height: 300px; width:300px;" alt="">
+ </div> 
+  
+</body>
+</html>
