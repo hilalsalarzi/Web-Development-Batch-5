@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10th class utility </title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- fontaswome  -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+ 
+    <div id="card1" class="card" style="width: 18rem; display: none;">
+        <img src="assets/images/slider1.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    
+    <div id="card2" class="card" aria-hidden="true" style="width: 18rem;">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+        <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+            </p>
+            <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.743453758196!2d71.46601387460778!3d33.99912277317703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d911fd355aede9%3A0x50ca7592c985a2e0!2sIT%20Park%20-%20Information%20Technology%20Park%20Peshawar!5e0!3m2!1sen!2s!4v1733995193513!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script>
+        // Timer logic to toggle cards
+        window.onload = function () {
+            const card1 = document.getElementById('card1');
+            const card2 = document.getElementById('card2');
+    
+            // Hide card2 and show card1 after 5 seconds
+            setTimeout(() => {
+                card1.style.display = 'block';
+                card2.style.display = 'none';
+            }, 5000); // 5000ms = 5 seconds
+        };
+    
+        // Color picker logic
+        let colorPicker = document.getElementById('exampleColorInput');
+        colorPicker.addEventListener('change', function () {
+            console.log(colorPicker.value);
+            document.getElementById('showcolor').innerHTML = colorPicker.value;
+        });
+    </script>
+    
+</body>
+</html>
